@@ -54,10 +54,13 @@
                     袋熊收藏在线鉴宝，是一款基于微信的产品，操作简单方便，遇到自己看不懂的藏品，可以随时向老师发起鉴宝提问，老师会及时给您解答；在自己不断实践的同时，你还可以偷听、偷看别的藏友的鉴宝记录，都是非常鲜活的实战案例。有专家老师带领必定能事半功倍，与国内顶尖鉴定大师一起同行，定会让你的收藏之路变的更加顺畅。
                     </p>
                     <div class="qr_code-before">
-                        <span class="look">马上查看</span>
+                        <span class="look">马上查看>></span>
                         <div class="qr_code">
+                            <i class="icon icon-close"></i>
+                            <p>袋熊收藏专家鉴宝</p>
                             <img src="../img/qr_study.png" alt="" class="img-normal">
                             <img src="../img/qr_study@2x.png" alt="" class="img-retina">
+                            <div class="wechat-wrap"><i class="icon icon-wechat"></i><span>扫描二维码，关注公众号</span></div>
                         </div>
                     </div>
                 </div>
@@ -81,10 +84,13 @@
                         <p>点击提交向老师提问，按照提示微信支付对应的鉴宝费用，等待老师解答，如果老师超过48小时未回答提问，系统会自动退还您的提问费。</p>
                     </div>
                     <div class="qr_code-before">
-                        <span class="look">我要鉴宝</span>
+                        <span class="look">我要鉴宝>></span>
                         <div class="qr_code">
+                            <i class="icon icon-close"></i>
+                            <p>袋熊收藏专家鉴宝</p>
                             <img src="../img/qr_beg.png" alt="" class="img-normal">
                             <img src="../img/qr_beg@2x.png" alt="" class="img-retina">
+                            <div class="wechat-wrap"><i class="icon icon-wechat"></i><span>扫描二维码，关注公众号</span></div>
                         </div>
                     </div>
                 </div>
@@ -235,8 +241,11 @@
                             <div class="qr_code-before">
                                 <span class="look">向专家提问>></span>
                                 <div class="qr_code">
+                                    <i class="icon icon-close"></i>
+                                    <p>袋熊收藏专家鉴宝</p>
                                     <img src="../img/qr_beg.png" alt="" class="img-normal">
                                     <img src="../img/qr_beg@2x.png" alt="" class="img-retina">
+                                    <div class="wechat-wrap"><i class="icon icon-wechat"></i><span>扫描二维码，关注公众号</span></div>
                                 </div>
                             </div>
                         </div>
@@ -298,7 +307,7 @@
                 </div>
             </div>
         </div>
-        <p class="copyright">Copyright © idaxixiong 2016   京ICP备16036095号  北京袋熊网络科技有限公司 版权所有</p>
+        <p class="copyright">Copyright © idaxixiong 2017   京ICP备16036095号  北京袋熊网络科技有限公司 版权所有</p>
     </footer>
 
     <script src="../js/jquery-3.1.1.min.js"></script>
@@ -310,6 +319,17 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
+      $(function() {
+        $('.look').on('click', function(event) {
+            var _this = $(this);
+            var _siblings = _this.siblings('.qr_code');
+            _siblings.fadeIn();
+            event.stopPropagation();
+            $(document).on('click', function(e) {
+                _siblings.fadeOut();
+            });
+        });
+      })
     </script>
 </body>
 </html>
